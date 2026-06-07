@@ -108,7 +108,9 @@ O Tailwind oferece um sistema completo e flexível para controlar as dimensões 
 ### Conceitos aplicados na aula:
 
 Tamanho Absoluto (w-6, w-12, w-24, w-48): Define larguras fixas baseadas na escala de espaçamento do Tailwind, onde cada unidade equivale a 4px (ex: w-6 = 24px, w-24 = 96px). Não se adapta ao contêiner pai.
+
 Tamanho Relativo (w-1/4, w-1/3, w-1/2, w-2/3): Define a largura como uma fração do contêiner pai. Ótimo para criar divisões proporcionais dentro de um layout, como duas colunas de igual tamanho lado a lado.
+
 w-full: Faz o elemento ocupar 100% da largura disponível no contêiner pai. É diferente de não definir largura nenhuma (comportamento padrão de elementos block).
 - w-auto: Deixa o navegador calcular a largura automaticamente com base no conteúdo do elemento, semelhante ao comportamento natural de elementos inline.
 - min-w-X (Largura Mínima): Garante que um elemento nunca ficará menor do que o valor definido, mesmo que o espaço disponível seja insuficiente. Útil para evitar que conteúdos sejam esmagados.
@@ -168,4 +170,4 @@ O Tailwind adota por padrão a filosofia mobile-first: os estilos sem prefixo se
 - xl: (≥ 1280px): Para desktops maiores.
 - 2xl: (≥ 1536px): Para monitores grandes e ultrawide.
 
-*** Regra de ouro do mobile-first: Comece sempre estilizando para a tela menor (sem prefixo) e vá adicionando prefixos de breakpoint para adaptar o layout às telas maiores. Nunca ao contrário. ***
+**Regra de ouro do mobile-first: Comece sempre estilizando para a tela menor (sem prefixo) e vá adicionando prefixos de breakpoint para adaptar o layout às telas maiores. Nunca ao contrário.**
