@@ -8,25 +8,30 @@
 </head>
 <body class="font-main">
     <!-- HEADER-->
-    <header class="flex justify-between items-center px-8 py-9 bg-black text-white">
+    <header class="flex justify-between items-center px-8 lg:px-30 py-9 bg-black text-white">
         <div class="flex items-center gap-4">
             <div class="size-12"> <!-- nao é recomendado aplicar tamanhos diretos nas imagens-->
                 <img src="./img/icon_logo.png" alt="Logo do Site" />
             </div>
             <h1 class="text-4xl">Portfólio</h1>
         </div>
-        <div class="size-8">
+        <div class="hidden lg:flex lg:flex-row items-center gap-8">
+            <a class="text-2xl hover:text-main transition duration-200" href="#">Início</a>
+            <a class="text-2xl hover:text-main transition duration-200" href="#">Projetos</a>
+            <a class="text-2xl font-semibold text-white bg-main px-4 py-2 rounded-2xl hover:bg-teal-600 transition duration-200" href="#">FALE CONOSCO</a>
+        </div>
+        <div class="size-8 lg:hidden">
             <img src="./img/icon_hamburguer.png" alt="Icon hamburguer" />
         </div>
     </header>
     <!-- HERO -->
-    <section class="text-black px-6 py-16 bg-white">
-        <div class="max-w-100 max-h-100">
+    <section class="flex flex-col lg:flex-row-reverse min-h-screen items-center text-black px-6 lg:px-30 py-16 bg-white">
+        <div class="lg:w-1/2 max-w-100 max-h-100 lg:max-w-175 lg:max-h-175">
             <img src="./img/sally.png" alt="imagem da sally: mascote da byron.solutions">
         </div>
-        <div class="flex flex-col gap-12">
-            <div class="text-center flex flex-col gap-8 items-center">
-                <div class="flex flex-col gap-8">
+        <div class="lg:w-1/2 lg:max-w-140 flex flex-col gap-12">
+            <div class="text-center lg:text-start flex flex-col gap-8 items-center lg:items-start">
+                <div class="flex flex-col gap-8 max-w-3/4">
                     <h2 class="text-5xl">Conheça a <span class="text-secundary">Sally</span></h2>
                     <div class="flex flex-col gap-4">
                         <h3 class="text-2xl">A mascote da <span class="text-secundary">byron.solutions</span></h3>
@@ -39,7 +44,7 @@
                 </div>
                 <button class="text-2xl font-semibold text-white bg-main px-4 py-2 rounded-2xl hover:bg-teal-600 transition duration-200">SAIBA MAIS</button>
             </div>
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center lg:justify-start gap-8">
                 <p class="text-2xl">Nos Contate!</p>
                 <div class="flex gap-6">
                     <div class="size-12">
@@ -56,45 +61,45 @@
         </div>
     </section>
     <!-- ÚLTIMOS PROJETOS -->
-     <section class="bg-secundary px-6 py-8 text-black flex flex-col gap-8 items-center">
+     <section class="bg-secundary px-6 py-8 text-black flex flex-col gap-8 items-center lg:gap-16">
         <h2 class="text-white font-extrabold text-2xl">ÚLTIMOS PROJETOS</h2>
-        <div class="grid grid-flow-row grid-cols-1 gap-12">
-            <div class="flex flex-col bg-white max-w-[380px]: rounded-lg p-3 gap-4 drop-shadow-lg">
+        <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="flex flex-col bg-white max-w-95 rounded-lg p-3 gap-4 drop-shadow-lg">
                 <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card1.webp" alt="Notebook aberto em uma página expondo gráficos e uma tablet ao lado aberto em um calendário"></div>
                 <div class="h-1/4">
                     <h3 class="text-lg">Projeto 1</h3>
                     <p class="text-base text-gray">Aplicativo Desktop</p>
                 </div>
             </div>
-            <div class="flex flex-col bg-white max-w-[380px]: rounded-lg p-3 gap-4 drop-shadow-lg">
+            <div class="flex flex-col bg-white max-w-95 rounded-lg p-3 gap-4 drop-shadow-lg">
                 <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card2.webp" alt="Notebook aberto em uma página expondo gráficos e uma tablet ao lado aberto em um calendário"></div>
                 <div class="h-1/4">
                     <h3 class="text-lg">Projeto 2</h3>
                     <p class="text-base text-gray">Aplicativo Mobile</p>
                 </div>
             </div>
-            <div class="flex flex-col bg-white max-w-[380px]: rounded-lg p-3 gap-4 drop-shadow-lg">
+            <div class="flex flex-col bg-white max-w-95 rounded-lg p-3 gap-4 drop-shadow-lg">
                 <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card3.jpg" alt="Notebook aberto em uma página expondo gráficos e uma tablet ao lado aberto em um calendário"></div>
                 <div class="h-1/4">
                     <h3 class="text-lg">Projeto 3</h3>
                     <p class="text-base text-gray">Design</p>
                 </div>
             </div>
-            <div class="flex flex-col bg-white max-w-[380px]: rounded-lg p-3 gap-4 drop-shadow-lg">
+            <div class="flex flex-col bg-white max-w-95 rounded-lg p-3 gap-4 drop-shadow-lg">
                 <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card2.webp" alt="Notebook aberto em uma página expondo gráficos e uma tablet ao lado aberto em um calendário"></div>
                 <div class="h-1/4">
                     <h3 class="text-lg">Projeto 4</h3>
                     <p class="text-base text-gray">Aplicativo Mobile</p>
                 </div>
             </div>
-            <div class="flex flex-col bg-white max-w-[380px]: rounded-lg p-3 gap-4 drop-shadow-lg">
+            <div class="flex flex-col bg-white max-w-95 rounded-lg p-3 gap-4 drop-shadow-lg">
                 <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card3.jpg" alt="Notebook aberto em uma página expondo gráficos e uma tablet ao lado aberto em um calendário"></div>
                 <div class="h-1/4">
                     <h3 class="text-lg">Projeto 5</h3>
                     <p class="text-base text-gray">Design</p>
                 </div>
             </div>
-            <div class="flex flex-col bg-white max-w-[380px]: rounded-lg p-3 gap-4 drop-shadow-lg">
+            <div class="flex flex-col bg-white max-w-95 rounded-lg p-3 gap-4 drop-shadow-lg">
                 <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card1.webp" alt="Notebook aberto em uma página expondo gráficos e uma tablet ao lado aberto em um calendário"></div>
                 <div class="h-1/4">
                     <h3 class="text-lg">Projeto 6</h3>
@@ -104,15 +109,15 @@
         </div>
      </section>
      <!-- FOOTER -->
-     <footer class="bg-black text-white flex flex-col p-8 gap-16">
-        <div class="flex flex-col items-center gap-16">
-            <div class="flex flex-col items-center gap-3">
+     <footer class="bg-black text-white flex flex-col lg:items-center p-8 gap-16 lg:gap-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+            <div class="flex flex-col items-center gap-3 lg:w-1/3">
                 <div class="size-16">
                     <img src="./img/icon_logo.png" alt="Logo do site">
                 </div>
                 <p class="text-xl">Design por Diego Nadur • DVP 2026</p>
             </div>
-            <div class="text-center gap-2">
+            <div class="text-center gap-2 lg:w-1/3">
                 <h3 class="text-2xl">SOBRE MIM</h3>
                 <p class="text-base"> <!-- text base é o tamanho padrão de 16px -->
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem optio inventore
@@ -120,7 +125,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-2 items-center">
             <p class="text-2xl">Desenvolvido por</p>
             <div class="max-w-65"><img src="./img/logo_byron.png" alt="Logo da byron.solutions"></div>
         </div>
