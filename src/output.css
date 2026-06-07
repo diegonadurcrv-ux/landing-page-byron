@@ -252,6 +252,9 @@
   .max-w-50 {
     max-width: calc(var(--spacing) * 50);
   }
+  .max-w-65 {
+    max-width: calc(var(--spacing) * 65);
+  }
   .max-w-95 {
     max-width: calc(var(--spacing) * 95);
   }
