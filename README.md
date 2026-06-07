@@ -87,3 +87,85 @@ Enquanto o Flexbox trabalha em uma dimensão (linha OU coluna), o Grid é um sis
 - row-span-X: Da mesma forma que um elemento pode ocupar várias colunas, ele pode se esticar para baixo, ocupando várias linhas (ex: row-span-2).
 
 **Flex vs Grid (Regra de ouro): Use Flexbox quando quiser organizar itens em um fluxo contínuo (uma barra de navegação, botões lado a lado). Use Grid quando precisar de uma estrutura rígida de colunas e linhas (uma galeria de imagens, o esqueleto da página inteira)**
+
+## 📐 Aula 5: Alinhamento de Itens no Grid
+Aprofundamento no CSS Grid com foco no controle de alinhamento dos itens dentro das células. Enquanto nas aulas anteriores vimos como distribuir elementos em linhas e colunas, aqui exploramos como cada item se posiciona dentro do seu próprio espaço na grade.
+
+### Conceitos aplicados na aula:
+
+- justify-items-stretch: Faz com que cada item se estique horizontalmente para preencher toda a largura da célula do grid. É o comportamento padrão do grid, mas pode ser sobrescrito por outros valores.
+- justify-items-start / justify-items-end / justify-items-center: Controla o alinhamento horizontal dos itens dentro das células. O start os empurra para a esquerda, o end para a direita, e o center os centraliza.
+- items-baseline (Flex): No contexto do Flexbox, o items-baseline alinha todos os itens pela linha de base do texto, independentemente do tamanho de cada caixa — útil quando os elementos têm alturas diferentes mas precisam de alinhamento tipográfico consistente.
+
+### Outros conceitos de alinhamento:
+
+- place-items-center: Atalho que centraliza os itens tanto no eixo horizontal quanto no vertical de uma vez só (equivale a usar justify-items-center e items-center juntos).
+- self-start / self-end / self-center: Enquanto as propriedades acima controlam todos os filhos a partir do contêiner, as variações com "self" permitem que um item individual sobrescreva o alinhamento definido pelo pai, posicionando apenas a si mesmo de forma diferente.
+
+## 📏 Aula 6: Larguras e Alturas
+O Tailwind oferece um sistema completo e flexível para controlar as dimensões dos elementos, combinando valores absolutos (fixos) e relativos (proporcionais ao contêiner pai). Dominar esse sistema é essencial para construir layouts que funcionem bem em diferentes tamanhos de tela.
+
+### Conceitos aplicados na aula:
+
+Tamanho Absoluto (w-6, w-12, w-24, w-48): Define larguras fixas baseadas na escala de espaçamento do Tailwind, onde cada unidade equivale a 4px (ex: w-6 = 24px, w-24 = 96px). Não se adapta ao contêiner pai.
+Tamanho Relativo (w-1/4, w-1/3, w-1/2, w-2/3): Define a largura como uma fração do contêiner pai. Ótimo para criar divisões proporcionais dentro de um layout, como duas colunas de igual tamanho lado a lado.
+w-full: Faz o elemento ocupar 100% da largura disponível no contêiner pai. É diferente de não definir largura nenhuma (comportamento padrão de elementos block).
+- w-auto: Deixa o navegador calcular a largura automaticamente com base no conteúdo do elemento, semelhante ao comportamento natural de elementos inline.
+- min-w-X (Largura Mínima): Garante que um elemento nunca ficará menor do que o valor definido, mesmo que o espaço disponível seja insuficiente. Útil para evitar que conteúdos sejam esmagados.
+- max-w-X (Largura Máxima): Limita o crescimento de um elemento. Mesmo que o espaço disponível seja maior, o elemento não ultrapassará esse valor. Muito usado para manter textos legíveis em telas largas.
+- size-X: Atalho que define largura e altura com um único valor ao mesmo tempo (equivale a usar w-X h-X juntos).
+- h-X (Altura): Funciona da mesma forma que w-X, mas no eixo vertical. Pode também usar valores relativos como h-full e h-screen (100% da altura da viewport).
+
+## 🎨 Aula 7: Bordas, Sombras e Opacidade
+Além de tamanhos e posicionamento, o Tailwind oferece utilitários visuais para enriquecer a aparência dos elementos. Bordas, arredondamentos, sombras e opacidade são recursos fundamentais para dar profundidade e refinamento à interface.
+
+### Conceitos aplicados na aula:
+
+- border-2: Define a espessura da borda do elemento. O número representa a largura em pixels (border = 1px, border-2 = 2px, border-4 = 4px, etc.).
+- border-green-800: Define a cor da borda usando a mesma paleta de cores do Tailwind. Deve ser usada junto com uma classe border-X para que a borda apareça.
+- rounded-xl: Arredonda os cantos do elemento. A escala vai do sutil (rounded-sm) ao totalmente circular (rounded-full), passando por valores intermediários como rounded, rounded-md, rounded-lg e rounded-xl.
+- shadow-lg: Adiciona uma sombra ao elemento. O tamanho varia de shadow-sm a shadow-2xl. A sombra usa por padrão uma cor escura semitransparente.
+- shadow-blue-400: Personaliza a cor da sombra. Combinado com shadow-lg, permite criar efeitos visuais como "glows" coloridos, muito usados em interfaces modernas.
+- opacity-100: Controla a transparência do elemento inteiro, de opacity-0 (invisível) a opacity-100 (totalmente visível). Valores intermediários como opacity-50 deixam o elemento semitransparente.
+
+### Outros conceitos visuais:
+
+- ring-X: Cria um contorno (outline) ao redor do elemento sem ocupar espaço no layout, diferentemente da border. Muito usado para indicar foco em campos de formulário.
+- divide-X: Adiciona bordas automaticamente entre os elementos filhos de um contêiner, sem precisar adicionar borda em cada filho individualmente.
+
+## 🖱️ Aula 8: Hover, Focus e Transições
+O Tailwind facilita a criação de estados interativos como hover e focus diretamente no HTML, usando prefixos antes das classes de estilo. Combinados com as classes de transição, esses recursos permitem criar animações suaves e feedback visual para o usuário sem escrever nenhum CSS customizado.
+
+### Conceitos aplicados na aula:
+
+- hover:bg-teal-600: O prefixo hover: faz com que a classe só seja aplicada quando o mouse estiver sobre o elemento. Qualquer classe do Tailwind pode ser prefixada com hover:.
+- focus:bg-teal-600: O prefixo focus: aplica o estilo quando o elemento está em foco (geralmente ao clicar ou navegar pelo teclado). Muito importante para acessibilidade.
+- hover:scale-105: Aumenta o elemento em 5% ao passar o mouse, criando um efeito de "crescimento". Faz parte das classes de transformação (scale, rotate, translate).
+- hover:bg-transparent: Remove a cor de fundo no hover, útil para criar botões que "esvaziam" e mostram só a borda ao passar o mouse.
+- hover:border-4 / hover:border-teal-500: Adiciona borda no hover. Combinado com hover:bg-transparent e hover:text-black, cria o efeito clássico de botão "outline" ao passar o mouse.
+- transition: Habilita a interpolação suave entre os estados padrão e o hover/focus. Sem ele, as mudanças de estilo ocorrem de forma abrupta e instantânea.
+- duration-150 / duration-450: Controla a duração da transição em milissegundos. O 150 é rápido e responsivo, enquanto valores maiores criam animações mais lentas e dramáticas.
+
+### Outros modificadores de estado:
+
+- active: Aplica o estilo no momento exato do clique, enquanto o botão do mouse está pressionado. Ótimo para criar feedback tátil visual.
+- disabled: Estiliza o elemento quando ele está desabilitado (atributo HTML disabled), como um botão que ainda não pode ser clicado.
+- group-hover: Permite que um elemento filho mude de estilo quando o mouse passa sobre um elemento pai marcado com a classe group.
+
+## 📱 Aula 9: Design Responsivo
+O Tailwind adota por padrão a filosofia mobile-first: os estilos sem prefixo se aplicam a todas as telas, e os prefixos de breakpoint definem adaptações para telas maiores. Isso garante que o layout base seja sempre pensado para dispositivos móveis, crescendo progressivamente para telas maiores.
+
+### Conceitos aplicados na aula:
+
+- sm: (≥ 640px): Breakpoint para telas pequenas, como smartphones em modo paisagem e tablets pequenos.
+- md: (≥ 768px): Breakpoint para tablets e telas médias.
+- lg: (≥ 1024px): Breakpoint para laptops e desktops menores.
+- lg:flex-row: Um exemplo prático de uso de breakpoint. A classe flex-col se aplica por padrão (mobile), e ao atingir o breakpoint lg a direção muda para flex-row, reorganizando o layout horizontalmente em telas maiores.
+- sm:bg-pink-200 / md:bg-pink-300 / lg:bg-pink-400: Demonstração visual de breakpoints — a cor de fundo fica progressivamente mais escura conforme a tela aumenta, ilustrando como cada prefixo atua em sua faixa de tamanho correspondente.
+
+### Outros breakpoints disponíveis:
+
+- xl: (≥ 1280px): Para desktops maiores.
+- 2xl: (≥ 1536px): Para monitores grandes e ultrawide.
+
+*** Regra de ouro do mobile-first: Comece sempre estilizando para a tela menor (sem prefixo) e vá adicionando prefixos de breakpoint para adaptar o layout às telas maiores. Nunca ao contrário. ***
